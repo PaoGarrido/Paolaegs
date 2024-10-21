@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web con Carrusel y Menú</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+    <!-- Menú de Navegación -->
+    <header>
+        <nav class="menu">
+            <div class="logo">
+                <!-- Ruta de tu logo -->
+                <img src="IMG/CANASTITA LOGO.png">
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#categoria">Servicios</a></li>
+                <li><a href="#productos">Nosotros</a></li>
+                <li><a href="#nosotros">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Header con el carrusel -->
+    <header>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="IMG/1.png">
+                    <div class="carousel-caption">
+                        <h1>TU CANASTITA FAV</h1>
+                        <p>Todo lo que buscas más cerca.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="IMG/2.png">
+                    <div class="carousel-caption">
+                        <h1>TU CANASTITA FAV</h1>
+                        <p>Todo lo que buscas más cerca.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="IMG/3.png" alt="Imagen 3">
+                    <div class="carousel-caption">
+                        <h1>TU CANASTITA FAV</h1>
+                        <p>Todo lo que buscas más cerca</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles de navegación -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </header>
+
+
+    
+
+    <!-- Menú de Navegación -->
+    <!-- Aquí iría el código del menú y del carrusel que ya hemos hecho -->
+
+    <!-- Sección de Productos -->
+    <section class="productos" id="Categoria">
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="IMG/gratis-png-bebidas-gaseosas-sprite-coca-cola-fanta-bebida-sin-alcohol-sprite-thumbnail-removebg-preview.png" alt="Icono 1">
+                <h3>Refrescos</h3>
+                <p>Un sorbo de frescura en cada botella .</p>
+            </div>
+            <div class="producto">
+                <img src="IMG/png-transparent-smoothie-fruit-vegetable-eating-vegetable-natural-foods-leaf-vegetable-food-removebg-preview (1).png" alt="Icono 2">
+                <h3>Verduras y frutas</h3>
+                <p>Sabor natural, frescura sin igual.</p>
+            </div>
+            <div class="producto">
+                <img src="IMG/raw-meat-removebg-preview.png" alt="Icono 3">
+                <h3>Carnes</h3>
+                <p>Tierna, jugosa y llena de sabor.</p>
+            </div>
+            <div class="producto">
+                <img src="IMG/gratis-png-dulces-comida-chatarra-dulce-de-leche-distribuidora-mayorista-italia-papas-fritas-removebg-preview (1).png" alt="Icono 4">
+                <h3>Botanas</h3>
+                <p>El snack perfecto para cada ocasión.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+    <!-- Sección de Productos -->
+    <section class="productos-section" id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-grid" id="productos-grid">
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="/IMG/botana (2).jpeg" alt="Producto 1" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>Cariba picante</h3>
+                <p>Picante y crocante</p>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="/IMG/botana 3.jpg" alt="Producto 2" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>GALLETA PICNIC</h3>
+                <p>Con picnic todo sabe mejor.</p>
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="/IMG/botana.jpeg" alt="Producto 3" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>Zambos Ceviche</h3>
+                <p>Un sabor nuevo y delicioso.</p>
+            </div>
+            <!-- Producto 4 -->
+            <div class="producto">
+                <img src="/IMG/BANANA-2-LITROS.png" alt="Producto 4" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>Banana tropical</h3>
+                <p>El tamaño que deseas.</p>
+            </div>
+            <!-- Producto 5 -->
+            <div class="producto">
+                <img src="/IMG/carne.jpg" alt="Producto 5" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>Costillas de cerdo</h3>
+                <p>Sin tanta grasa y suave.</p>
+            </div>
+            <!-- Producto 6 -->
+            <div class="producto">
+                <img src="/IMG/pollo-enegro1-88f15ad421a5704cd816951306635346-640-0.jpg" alt="Producto 6" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>Pollo</h3>
+                <p>Suave y fresco.</p>
+            </div>
+            <!-- Producto 7 -->
+            <div class="producto oculto">
+                <img src="/IMG/BISTEC.jpg" alt="Producto 7" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>Lomo de cerdo</h3>
+                <p>Ideal para una carneada.</p>
+            </div>
+            <!-- Producto 8 -->
+            <div class="producto oculto">
+                <img src="/IMG/lata.jpg" alt="Producto 8" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>COCA COLA</h3>
+                <p>Helada, refrescante.</p>
+            </div>
+            <!-- Producto 9 -->
+            <div class="producto oculto">
+                <img src="/IMG/FRESCA.jpg" alt="Producto 9" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>Fresca</h3>
+                <p>Ideal para compartir.</p>
+            </div>
+            <!-- Producto 10 -->
+            <div class="producto oculto">
+                <img src="/IMG/pngtree-tomato-natural-gourmet-vegetables-png-image_6370292.jpg" alt="Producto 10" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>Tomate</h3>
+                <p>Recién traído del campo.</p>
+            </div>
+            <!-- Producto 11 -->
+            <div class="producto oculto">
+                <img src="/IMG/brocoli.jpg" alt="Producto 11" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>Broccoli
+                <p>Recién cosechado para ti.</p>
+            </div>
+            <!-- Producto 12 -->
+            <div class="producto oculto">
+                <img src="/IMG/cebolla-roja.jpg" alt="Producto 12" class="producto-img" onclick="abrirModal(this.src, this.alt)">
+                <h3>Cebolla roja</h3>
+                <p>Jugosa y grande</p>
+            </div>
+        </div>
+        <div class="ver-mas" id="ver-mas">
+            <button onclick="toggleProductos()">Mostrar más productos</button>
+        </div>
+    </section>
+
+    <!-- Modal para visualizar imágenes -->
+    <div id="modal" class="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img class="modal-contenido" id="modal-img">
+        <div id="modal-caption"></div>
+    </div>
+
+
+    <!-- Sección de Íconos Sociales -->
+     <!-- Footer -->
+      <section id="nosotros">
+    
+    
+     <footer class="footer">
+        <!-- Sección de Íconos Sociales -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon tiktok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+        <!-- Información de Dirección y Horario -->
+        <div class="footer-info">
+            <p><strong>Dirección:</strong> Colonia Morazán, Comayagua, Honduras</p>
+            <p><strong>Horario:</strong> Lunes a Viernes: 9:00 AM - 10:00 PM</p>
+        </div>
+        <!-- Derechos Reservados y Créditos -->
+        <div class="footer-bottom">
+            <p>Derechos reservados © 2024</p>
+            <p>Design by <a href="https://www.tu-sitio-de-diseño.com" target="_blank">Paola</a></p>
+        </div>
+    </footer>
+</section>
+<!-- Pantalla de Carga -->
+<div id="loader" class="loader">
+    <img src="IMG/CANASTITA LOGO.png" alt="Logo" class="loader-logo">
+    <div class="loader-bar-container">
+        <div class="loader-bar"></div>
+    </div>
+</div>
+
+    <script>
+                // Función para ocultar la pantalla de carga
+            function hideLoader() {
+                const loader = document.getElementById('loader');
+                loader.classList.add('hidden');
+            }
+
+            // Función para animar la barra de carga
+            function animateLoaderBar() {
+                const loaderBar = document.getElementById('loader-bar');
+                let width = 0;
+                const interval = setInterval(() => {
+                    if (width >= 100) {
+                        clearInterval(interval);
+                        hideLoader();
+                    } else {
+                        width++;
+                        loaderBar.style.width = width + '%';
+                    }
+                }, 30); // Ajusta la velocidad cambiando el valor de 30ms
+            }
+
+            // Ejecutar la animación cuando la página haya cargado completamente
+            window.addEventListener('load', animateLoaderBar);
+
+    </script>
+    <!-- Vinculando el script externo -->
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,416 @@
+/* Reset de márgenes y paddings para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilo del header del menú */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+}
+
+.menu-items li {
+    margin-left: 20px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    transition: background 0.3s;
+}
+
+.menu-items a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Estilos del carrusel */
+.carousel {
+    position: relative;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 4200px; /* 1400px por 3 imágenes */
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 1400px;
+    height: 760px;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo del texto sobre las imágenes */
+.carousel-caption {
+    position: absolute;
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste preciso para centrar */
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption h1 {
+    font-size: 4em; /* Aumentado el tamaño de la fuente */
+    margin: 0;
+}
+
+.carousel-caption p {
+    font-size: 2em; /* Aumentado el tamaño de la fuente */
+}
+
+/* Botones de navegación del carrusel */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo de la sección de productos */
+.productos-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.productos-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Grid de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en una fila */
+    gap: 20px; /* Espacio entre las columnas */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.producto {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.producto-img:hover {
+    transform: scale(1.05);
+}
+
+.producto h3 {
+    font-size: 1.5em;
+    margin: 15px 0 10px 0;
+    color: #333;
+}
+
+.producto p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Botón de Mostrar más/menos */
+.ver-mas {
+    margin-top: 30px;
+}
+
+.ver-mas button {
+    padding: 12px 25px;
+    font-size: 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ver-mas button:hover {
+    background-color: #555;
+}
+
+/* Estilos para productos ocultos */
+.oculto {
+    display: none;
+}
+
+/* Estilo del Footer */
+.footer {
+    background-color: #222; /* Fondo oscuro para el footer */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espacio entre los íconos */
+    margin-bottom: 20px;
+}
+
+.footer .social-icon {
+    color: white; /* Color blanco por defecto */
+    font-size: 2.5em; /* Tamaño de los íconos */
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 50%; /* Bordes redondeados */
+    padding: 10px;
+}
+
+.footer .social-icon:hover {
+    transform: scale(1.2); /* Efecto de aumento al pasar el cursor */
+}
+
+/* Colores de hover específicos para cada red social */
+.footer .social-icon.instagram:hover {
+    color: #e1306c; /* Color de Instagram */
+}
+
+.footer .social-icon.facebook:hover {
+    color: #3b5998; /* Color de Facebook */
+}
+
+.footer .social-icon.tiktok:hover {
+    color: #000000; /* Color de TikTok */
+}
+
+.footer .footer-info {
+    margin-bottom: 20px;
+}
+
+.footer .footer-info p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.footer .footer-bottom p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.footer .footer-bottom a {
+    color: #e1306c; /* Color del enlace */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer .footer-bottom a:hover {
+    color: #ff6699; /* Color al pasar el cursor */
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-contenido {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+#modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.cerrar {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .productos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-inner {
+        width: 4200px; /* Mantener el ancho para el carrusel */
+    }
+
+    .carousel-item {
+        min-width: 1400px; /* Ajustar según el tamaño de pantalla */
+    }
+
+    .footer .social-icons {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+html {
+scroll-behavior: smooth;
+   }
+/* Estilos de la Pantalla de Carga */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222; /* Fondo oscuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté por encima de todo */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-logo {
+    width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+    animation: moveLogo 2s infinite;
+}
+
+@keyframes moveLogo {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.loader-bar-container {
+    width: 80%;
+    max-width: 400px;
+    height: 20px;
+    background-color: #555;
+    border-radius: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.loader-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #e1306c; /* Color de la barra de carga */
+    border-radius: 10px;
+    animation: loadBar 3s forwards;
+}
+.loader-bar {
+    /* ... */
+    animation: loadBar 5s forwards; /* Cambia 3s al tiempo deseado */
+}
+
+@keyframes loadBar {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+/* Ocultar la pantalla de carga cuando no está activa */
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
